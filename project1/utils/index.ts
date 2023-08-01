@@ -14,7 +14,7 @@
 // } catch (error) {
 // 	console.error(error);
 // }
-
+import { CarProps } from "@/types"
 export async function fetchCars(){
     const headers= {
 		'X-RapidAPI-Key': '9cff506b22msh1f500e4b70a85e5p1dede0jsn1cc859a71a1d',
@@ -25,4 +25,8 @@ export async function fetchCars(){
     })
     const result= response.json()
     return result
+}
+
+export const generateCarImageUrl=(car:CarProps,angle?:string)=>{
+    
 }
